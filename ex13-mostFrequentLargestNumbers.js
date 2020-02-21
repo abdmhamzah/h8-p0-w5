@@ -8,15 +8,12 @@ function sorting(arrNumber) {
                 arrNumber[i] = arrNumber[j]
                 arrNumber[j] = temp
             }
-            
         }
-        
     }
     return arrNumber
 }
 
 function getTotal(arrNumber) {
-
     var banyak = 0
     for (let i = 0; i < arrNumber.length; i++) {
         if (arrNumber[i] == arrNumber[0]) {
@@ -28,9 +25,7 @@ function getTotal(arrNumber) {
 }
 
 function mostFrequentLargestNumbers(arrNumber) {
-var listSort = sorting(arrNumber);
-var countHighest = getTotal(listSort);
-return countHighest;
+return getTotal(sorting(arrNumber))
 }
 
 console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));

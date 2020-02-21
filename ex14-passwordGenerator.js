@@ -69,11 +69,7 @@ function passwordGenerator (name) {
     if (name.length < 5){
         return 'Minimal karakter yang diinputkan adalah 5 karakter'
     }
-    var gantiVokal = changeVocals (name)
-    var balikKata = reverseWord (gantiVokal)
-    var gantiUkuran = setLowerUpperCase (balikKata)
-    var hasil = removeSpaces (gantiUkuran)
-    return hasil
+    return removeSpaces (setLowerUpperCase (reverseWord (changeVocals (name))))
 
 }
 
